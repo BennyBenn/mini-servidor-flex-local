@@ -64,3 +64,7 @@ window.onload = function() {
     // Your code here
     entrada();
  };
+ function cerrar(){
+	window.open('','_parent',''); 
+    window.close();	
+}

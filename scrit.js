@@ -40,7 +40,10 @@ countFilesInDirectory('path_to_your_directory')
     file.saveAs(filePath);
   });
   }
-
+  function cerrar(){
+    window.open('','_parent',''); 
+      window.close();	
+  }
 
 /**
  * @license

@@ -65,6 +65,10 @@ table td{
 #tablota{
   border: 5px solid red; /* adjust as needed */
 }
+#tablota _cuerpo_tabla{
+  width: 100px;
+  height: 100px;
+}
 #tablota td{
   width: 100px;
   height: 100px;
