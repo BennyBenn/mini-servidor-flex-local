@@ -1,5 +1,29 @@
-let nombr=document.getElementById('nombre').value;
-let contra=document.getElementById('password').value;
+let nombre = document.getElementById('nombree').value;
+let contraseña = document.getElementById('contraseñaa').value;
+
+let usuarios = ["1234"];
+let contras = ["1234"];
+
+function entrada() {
+  validadorDD();
+  window.location.href = "inicio.html";
+}
+
+function validadorDD() {
+  if (usuarios.includes(nombre) && contras.includes(contraseña)) {
+    if (usuarios.indexOf(nombre) === contras.indexOf(contraseña)) {
+      // Redirect to inicio.html
+      window.location.href = "inicio.html";
+    }
+  }
+}
+
+document.querySelector('form').addEventListener('submit', entrada);
+
+
+/*
+let nombre=document.getElementById('nombree').value;
+let contra=document.getElementById('contraseñaa').value;
 
 const usuarios=["1234"];
 const contras=["1234"];
@@ -10,10 +34,11 @@ function entrada() {
 
 
 function validadorDD(){
-  if(usuarios.includes(nombr) && contras.includes(contra))
-    if(usuarios.indexOf(nombr) === contras.indexOf(contra))
+  if(usuarios.includes(nombre) && contras.includes(contra)){
+    if(usuarios.indexOf(nombre) === contras.indexOf(contra)){
         window.location.href = "inicio.html";
-
+    }
+    }
 }
 
 
