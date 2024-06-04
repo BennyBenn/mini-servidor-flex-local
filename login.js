@@ -1,12 +1,41 @@
-let nombre = document.getElementById('nombree').value;
-let contraseña = document.getElementById('contraseñaa').value;
+let nombre = document.getElementById('nombree');
+let contraseña = document.getElementById('contraseñaa');
 
+nomb="Alvin";
+contra="caca";
+intentos=1;
+
+function entrada(){
+	if(intentos < 4 ){
+		if(nombre.value === nomb){		
+			if(contraseña.value === contra){
+				alert("entrada exitosa");
+			 	window.location.replace("inicio.html");
+			}
+		}else {alert("inicio fallifo"); intentos++;}
+	}else window.location.replace("inicio_fallido.html");
+	
+	nombre.value="";
+	contraseña.value="";
+	nombre.focus();
+}
+
+function cerrar(){
+	window.open('','_parent',''); 
+    window.close();	
+}
+
+function regresarHome(){
+	window.location.replace("index.html");	
+}
+
+/*
 let usuarios = ["1234"];
 let contras = ["1234"];
 
-function entrada() {
-  validadorDD();
-  window.location.href = "inicio.html";
+function entrada(){
+  //validadorDD();
+  window.location.replace = "inicio.html";
 }
 
 function validadorDD() {
