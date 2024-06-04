@@ -74,6 +74,11 @@ table td{
   height: 225px;
 }
 
+.tabla_vid{
+  width: 50%;
+
+}
+
 vjs-svg-icon {
     display: inline-block;
     background-repeat: no-repeat;

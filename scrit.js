@@ -23,6 +23,24 @@ countFilesInDirectory('path_to_your_directory')
   });
 
 
+  function selectFileAndSave(fileInput, folderSelect, saveButton) {
+     // Get the selected file
+  var file = fileInput.files[0];
+  
+  // Open the file explorer
+  window.openDialog('file:///', '_self', 'width=640,height=480');
+  
+  // Select the folder to save the file
+  folderSelect.click();
+  
+  // Save the file
+  saveButton.addEventListener('click', function() {
+    var folder = folderSelect.value;
+    var filePath = folder + '/' + file.name;
+    file.saveAs(filePath);
+  });
+  }
+
 
 /**
  * @license
