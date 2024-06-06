@@ -59,9 +59,9 @@ countFilesInDirectory('path_to_your_directory')
       $video.id = "my-video";
       $video.classList.add("video-js");
       $video.controls = true;
-      $video.preload = "auto";
-      $video.width = "320";
-      $video.height = "264";        
+      //$video.preload = "auto";
+      $video.width = "300";
+      $video.height = "220";        
       $video.data_setup = "{";
       $video.autoplay = false;
       $video.muted = "muted";
