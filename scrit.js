@@ -1,4 +1,4 @@
-
+/*
 const fs = require('fs');
 
 function countFilesInDirectory(dirPath) {
@@ -40,10 +40,95 @@ countFilesInDirectory('path_to_your_directory')
     file.saveAs(filePath);
   });
   }
+  */
+
+  const $_cuerpo_tabla = document.querySelector("#_cuerpo_tabla");
+  function cargarVideos(){
+    
+  /*
+  <video
+  id="my-video"
+  class="video-js"
+  controls
+  preload="auto"
+  width="320"
+  height="264"
+  poster="MY_VIDEO_POSTER.jpg"
+  data-setup="{}"
+  autoplay="true"
+  muted="muted"
+  loop
+  >
+  <source src="video/1716908024513993.webm" type="video/mp4" />
+  <source src="video/1716908024513993.webm" type="video/webm" />
+  <p class="vjs-no-js"> To view this video please enable JavaScript, and consider upgrading to a web browser that
+    <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a> </p>
+  </video>
+    */
+    contador=1;
+  var dir = 'video/video_';
+  var files = [];
+  for (var i = 1000; i <= 1055; i++) files.push(dir + i + '.webm');     
+  console.log(files);
+
+  for(j = 1; j < files.length; j++){
+    const $tr = document.createElement("tr");
+    for(i=0; i < 4 ; i++){
+        let $video = document.createElement("video");
+        $video.id = "my-video";
+        $video.classList.add("video-js");
+        $video.controls = true;
+        $video.preload = "auto";
+        $video.width = "320";
+        $video.height = "264";
+        //$video.poster = "MY_VIDEO_POSTER.jpg";
+        $video.data_setup = "{";
+        $video.autoplay = true;
+        $video.muted = "muted";
+        $video.loop = true;
+        
+        let $source = document.createElement("source");
+        $source.src = files[contador];//contadr+".webm";
+        $source.type = "video/webm";
+        $video.appendChild($source);
+        
+        let $tdCodigo=document.createElement("td");
+        $tdCodigo.appendChild($video);
+        $tr.appendChild($tdCodigo);
+        contador++;
+    }
+    $_cuerpo_tabla.appendChild($tr);
+}
+  }
+
+  window.onload = function() {
+    // Your code here
+    cargarVideos();
+ };
+
   function cerrar(){
     window.open('','_parent',''); 
       window.close();	
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /**
  * @license

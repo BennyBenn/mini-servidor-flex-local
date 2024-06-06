@@ -105,7 +105,7 @@ function entrada(){
      //var dir = 'imagenes/galeria/';
      var dir = 'img_';
      var files = [];
-     for (var i = 10000; i <= 10096; i++) files.push(dir + i + '.JPG');     
+     for (var i = 10000; i <= 100196; i++) files.push(dir + i + '.JPG');     
      console.log(files);
 
 
@@ -116,13 +116,8 @@ function entrada(){
         for(i=0; i < 6 ; i++){
             let img = document.createElement("img");
             let $a = document.createElement('a');                
-           // if (typeof files[j].type === 'string' && files[j].type.in(/image\/.*$/i)) {
-                $a.href = "imagenes/galeria/" + files[contador];// + ".JPG";                
-                img.src = "imagenes/galeria/" + files[contador];//contador + ".JPG";                
-           // } else {            
-           // console.log("le valuo caca");
-          //  continue;           
-          //  }
+            $a.href = "imagenes/galeria/" + files[contador];// + ".JPG";                
+            img.src = "imagenes/galeria/" + files[contador];//contador + ".JPG";                
             $a.target = "_blank";
             img.style.width = "50px";
             img.style.height = "50px";
