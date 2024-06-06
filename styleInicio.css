@@ -62,8 +62,11 @@ table td{
     width: 100px;
     height: 100px;
 }
+
+/* 
+
 #tablota{
-  border: 5px solid red; /* adjust as needed */
+  border: 5px solid red; 
 }
 #tablota _cuerpo_tabla{
   width: 100px;
@@ -77,6 +80,7 @@ table td{
   width: 225px;
   height: 225px;
 }
+*/
 
 .tabla_vid{
   width: 50%;
