@@ -119,10 +119,14 @@ function entrada(){
             $a.href = "imagenes/galeria/" + files[contador];// + ".JPG";                
             img.src = "imagenes/galeria/" + files[contador];//contador + ".JPG";                
             $a.target = "_blank";
-            img.style.width = "50px";
-            img.style.height = "50px";
+            img.style.width = "120px";
+            img.style.height = "120px";
+            img.style.margin = "5px"; // Add this line for margin
+            img.style.border = "none"
             $a.appendChild(img);
             let $tdCodigo=document.createElement("td");
+            $tdCodigo.style.border = "none"; // Add this line to remove borders
+            $tdCodigo.style.padding = "0px";
             $tdCodigo.appendChild($a);
             $tr.appendChild($tdCodigo);
             contador++;
