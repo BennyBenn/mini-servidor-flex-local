@@ -52,53 +52,46 @@ countFilesInDirectory('path_to_your_directory')
 
   function cargarVideos(){
   contador=1000;
- 
   for(j = 1; j < 26; j++){
     const $tr = document.createElement("tr");
     for(i=0; i < 4 ; i++){
-        let $video = document.createElement("video");
-        $video.id = "my-video";
-        $video.classList.add("video-js");
-        $video.controls = true;
-        $video.preload = "auto";
-        $video.width = "320";
-        $video.height = "264";
-        //$video.poster = "MY_VIDEO_POSTER.jpg";
-        $video.data_setup = "{";
-        $video.autoplay = false;
-        $video.muted = "muted";
-        $video.loop = true;
-        $video.preload = "metadata";
+      let $video = document.createElement("video");
+      $video.id = "my-video";
+      $video.classList.add("video-js");
+      $video.controls = true;
+      $video.preload = "auto";
+      $video.width = "320";
+      $video.height = "264";        
+      $video.data_setup = "{";
+      $video.autoplay = false;
+      $video.muted = "muted";
+      $video.loop = true;
+      $video.preload = "metadata";
+      
+      let $source = document.createElement("source");
+      $source.src = "video/video_"+contador+".webm";//contadr+".webm";
+      $source.type = "video/webm";
+      $video.appendChild($source);
         
-        let $source = document.createElement("source");
-        $source.src = "video/video_"+contador+".webm";//contadr+".webm";
-        $source.type = "video/webm";
-        $video.appendChild($source);
-        
-        let $tdCodigo=document.createElement("td");
-        //$tdCodigo.appendChild($video);
-        let $a = document.createElement("a");
-$a.setAttribute("href", "video/video_"+contador+".webm");
-$a.setAttribute("target", "_blank");
-$a.appendChild($video);
-$tdCodigo.appendChild($a);
-
-        $tr.appendChild($tdCodigo);
-
-        contador++;
-    }
-    $_cuerpo_tabla.appendChild($tr);  
+      let $tdCodigo=document.createElement("td");        
+      let $a = document.createElement("a");
+      $a.setAttribute("href", "video/video_"+contador+".webm");
+      $a.setAttribute("target", "_blank");
+      $a.appendChild($video);
+      $tdCodigo.appendChild($a);
+      $tr.appendChild($tdCodigo);
+      contador++;
+    }$_cuerpo_tabla.appendChild($tr);  
 }
   }
 
-  window.onload = function() {
-    // Your code here
+  window.onload = function() {    
     cargarVideos();
  };
 
   function cerrar(){
     window.open('','_parent',''); 
-      window.close();	
+    window.close();	
   }
 
 

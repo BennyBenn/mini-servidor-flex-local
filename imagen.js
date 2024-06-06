@@ -130,8 +130,7 @@ function entrada(){
             $tdCodigo.appendChild($a);
             $tr.appendChild($tdCodigo);
             contador++;
-        }
-        $_cuerpo_tabla.appendChild($tr); 
+        }$_cuerpo_tabla.appendChild($tr); 
     }
      
 
